@@ -1,0 +1,59 @@
+/* Contenedor principal */
+.contenedor-confirmacion {
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    padding: 40px 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s;
+}
+
+.contenedor-confirmacion:hover {
+    transform: translateY(-5px);
+}
+
+/* Encabezado con logo */
+.header-confirmacion {
+    margin-bottom: 25px;
+}
+
+.logo-confirmacion {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* Título */
+.contenedor-confirmacion h1 {
+    color: #28a745;
+    font-size: 1.9em;
+    margin-bottom: 10px;
+}
+
+/* Detalles del pedido */
+.detalle-confirmacion p {
+    font-size: 1.1em;
+    color: #555555;
+    margin: 8px 0;
+}
+
+/* Botón elegante */
+.acciones-confirmacion .btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.acciones-confirmacion .btn-volver:hover {
+    background: linear-gradient(45deg, #0056b3, #0099cc);
+    transform: translateY(-2px);
+}

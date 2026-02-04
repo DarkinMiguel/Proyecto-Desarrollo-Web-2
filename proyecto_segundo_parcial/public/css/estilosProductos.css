@@ -1,0 +1,248 @@
+/* estilosProductos.css */
+
+/* LAYOUT GENERAL Y CONTENEDOR */
+.productos-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  align-items: flex-start;
+}
+
+.contenedor {
+  max-width: 1890px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* BARRA SUPERIOR */
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Contenido: izquierda y derecha */
+.top-bar-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+/* Botón modo oscuro */
+.modo-boton {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.modo-boton:hover {
+  background: #666;
+}
+
+/* MODO OSCURO */
+.modo-oscuro {
+  background-color: #302c2c;
+  color: white;
+}
+
+.modo-oscuro .top-bar {
+  background: #000;
+}
+
+.modo-oscuro a {
+  color: #fff;
+}
+
+/* GRID DE PRODUCTOS */
+.productos-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.producto {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  font-size: 18px;
+  margin: 12px 0;
+  color: #222;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0073ff;
+}
+
+.estado {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.agotado {
+  color: #c70000;
+}
+
+.en-stock {
+  color: #008000;
+}
+
+/* PANEL USUARIO DESLIZANTE */
+
+/* OVERLAY OSCURO */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+.overlay.activo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* PANEL USUARIO */
+.panel-usuario {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 320px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 30px 25px;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  transition: right 0.35s ease;
+  z-index: 9999;
+}
+
+.panel-usuario.activo {
+  right: 0;
+}
+
+/* CONTENIDO */
+.panel-usuario h3 {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.panel-usuario a {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.panel-usuario a:hover {
+  color: #007bff;
+}
+
+/* BOTÓN CERRAR */
+.cerrar {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.cerrar:hover {
+  opacity: 1;
+}
+
+.saludo-usuario {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.acciones-cliente {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+/* Tamaño exacto de los SVG */
+
+.acciones-cliente img {
+  width: 50px;        
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Hover limpio */
+.acciones-cliente img:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+
+/* CONTENEDOR DEL ESTADO Y CANTIDAD */
+.estado-cantidad {
+  display: flex;
+  gap: 10px; /* espacio entre estado y cantidad */
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* ESTADO DEL PRODUCTO */
+.estado {
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.estado.agotado {
+  background-color: #f8d4d4; /* rojo suave */
+  color: #a12d2d;
+}
+
+/* CANTIDAD DISPONIBLE */
+.cantidad {
+  font-size: 0.85rem;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: rgba(0, 200, 255, 0.1); /* cyan transparente */
+  display: inline-block;
+}

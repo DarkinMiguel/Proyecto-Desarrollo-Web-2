@@ -1,0 +1,275 @@
+/*ESTILO GENERAL*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/*BARRA SUPERIOR*/
+.top-bar {
+  background: #222;
+  color: #fff;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Enlaces */
+.top-bar a {
+  color: #fff;
+}
+
+/* Contenedor general */
+.contenedor {
+  max-width: 1890px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Contenido: izquierda y derecha */
+.top-bar-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+/* Botón modo oscuro */
+.modo-boton {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.modo-boton:hover {
+  background: #666;
+}
+
+
+/*HEADER PRINCIPAL*/
+.header-principal {
+  background: #ffffff;
+  box-shadow: 0 2px 4px #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: auto;
+  height: auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.menu a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+
+.iconos-header img {
+  width: 30px;
+  height: 30px;
+}
+
+/*TÍTULO DE SECCIÓN*/
+.titulo-seccion {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 35px 0;
+  color: #000;
+  font-weight: bold;
+}
+
+/*TARJETAS DE SERVICIOS*/
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.card-servicio {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ececec;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-servicio img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.card-servicio h3 {
+  font-size: 20px;
+  margin: 12px 0;
+  color: #222;
+}
+
+.card-servicio p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/*BIENVENIDA / SALUDOS*/
+.bienvenida-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.bloque-info {
+  flex: 1;
+  min-width: 350px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e6dbdb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque-info img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.bloque-info h2 {
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+.bloque-info p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .bienvenida-content {
+    flex-direction: column;
+  }
+
+  .bloque-info img {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+/*FOOTER*/
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* PANEL USUARIO DESLIZANTE */
+
+/* OVERLAY OSCURO */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+.overlay.activo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* PANEL USUARIO */
+.panel-usuario {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 320px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 30px 25px;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  transition: right 0.35s ease;
+  z-index: 9999;
+}
+
+.panel-usuario.activo {
+  right: 0;
+}
+
+/* CONTENIDO */
+.panel-usuario h3 {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.panel-usuario a {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.panel-usuario a:hover {
+  color: #007bff;
+}
+
+/* BOTÓN CERRAR */
+.cerrar {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.cerrar:hover {
+  opacity: 1;
+}
+
+.saludo-usuario {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}

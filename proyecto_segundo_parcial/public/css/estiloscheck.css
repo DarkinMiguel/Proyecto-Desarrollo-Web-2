@@ -1,0 +1,399 @@
+/* ─── RESET & BASE ─── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+/* ─── CONTENEDOR GENERAL ─── */
+.contenedor {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* ─── TOP-BAR ─── */
+.top-bar {
+    background: #222;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modo-boton {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.modo-boton:hover {
+    background: #666;
+}
+
+/* MODO OSCURO */
+.modo-oscuro {
+    background-color: #302c2c;
+    color: white;
+}
+
+.modo-oscuro .top-bar {
+    background: #000;
+}
+
+.modo-oscuro a {
+    color: #fff;
+}
+
+/* ─── HEADER ─── */
+.header-principal {
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #00bcd4;
+}
+
+.iconos-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.iconos-header img {
+    width: 28px;
+    height: 28px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #222;
+}
+
+/* ─── CHECKOUT / FINALIZAR COMPRA ─── */
+.carrito-container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carrito-container h1 {
+    text-align: center;
+    color: #00bcd4;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.carrito-container p {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 6px rgba(0, 188, 212, 0.4);
+    outline: none;
+}
+
+.btn-pagar {
+    width: 100%;
+    padding: 12px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-pagar:hover {
+    background: #0097a7;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ─── LOGIN / FORMULARIOS ─── */
+.login-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 50px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.login-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.login-left .login-img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.btn-login {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+.btn-register {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #2575fc;
+    background-color: #fff;
+    color: #2575fc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #2575fc;
+    color: #fff;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+    background: #0d0d0d;
+    padding: 20px 0;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.redes-sociales img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.85;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 992px) {
+    .header-content {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .iconos-header {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 720px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu {
+        gap: 8px;
+    }
+
+    .logo img {
+        max-width: 130px;
+    }
+
+    .login-right {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .login-left {
+        align-items: center;
+        text-align: center;
+    }
+
+    nav.menu a {
+        font-size: 0.82rem;
+    }
+
+    .carrito-container {
+        padding: 20px;
+    }
+
+    .carrito-container h1 {
+        font-size: 22px;
+    }
+}

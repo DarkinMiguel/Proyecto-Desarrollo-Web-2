@@ -1,0 +1,136 @@
+/* Contenedor carrito */
+.carrito-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Tabla */
+.carrito-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.carrito-table thead {
+  background-color: #f0f0f0;
+}
+
+.carrito-table th, .carrito-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.carrito-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.carrito-table tfoot td {
+  font-size: 1.1em;
+  background-color: #f7f7f7;
+}
+
+/* Botón quitar producto */
+.btn-quitar {
+  background-color: #ff4d4d;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-quitar:hover {
+  background-color: #e60000;
+}
+
+/* Mensaje carrito vacío */
+.carrito-vacio {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  margin: 20px 0;
+}
+
+/* Botones de acción */
+.acciones-carrito {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-seguir, .btn-pagar {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-seguir {
+  background-color: #007bff;
+}
+
+.btn-seguir:hover {
+  background-color: #0056b3;
+}
+
+.btn-pagar {
+  background-color: #28a745;
+}
+
+.btn-pagar:hover {
+  background-color: #1c7430;
+}
+
+
+/* Botón agregar en azul */
+.btn-agregar {
+    background-color: #007BFF; /* Azul */
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.btn-agregar:hover {
+    background-color: #0056b3;
+}
+
+/* Botón actualizar en verde */
+.btn-actualizar {
+    background-color: #28a745; /* Verde */
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.btn-actualizar:hover {
+    background-color: #1e7e34;
+}
+
+/* Botón quitar en rojo (ya existente, opcional) */
+.btn-quitar {
+    background-color: #dc3545; /* Rojo */
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.btn-quitar:hover {
+    background-color: #a71d2a;
+}

@@ -1,0 +1,276 @@
+/* ─── RESET & BASE ─── */
+/*PÁGINA PRINCIPAL*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/*BARRA SUPERIOR*/
+
+/* Contenedor general */
+.contenedor {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.top-bar {
+  background: #222;
+  color: #fff;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Contenido: izquierda y derecha */
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+}
+
+/* Botón modo oscuro */
+.modo-boton {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.modo-boton:hover {
+  background: #666666;
+}
+
+/* MODO OSCURO */
+.modo-oscuro {
+  background-color: #302c2c;
+  color: white;
+}
+
+.modo-oscuro .top-bar {
+  background: #000;
+}
+
+.modo-oscuro a {
+  color: #fff;
+}
+
+/*HEADER PRINCIPAL*/
+.header-principal {
+  background: #ffffff;
+  box-shadow: 0 2px 4px #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .header-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+.menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+
+.iconos-header img {
+  width: auto;
+  height: auto;
+  max-width: 30px;
+  
+}
+
+/* ─── ESTILOS REGISTROS ─── */
+
+.registro-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.registro-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.registro-imagen img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.registro-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 420px;
+}
+
+.registro-card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registro-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.registro-form input,
+.registro-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    resize: none;
+}
+
+.registro-form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.registro-form button:hover {
+    opacity: 0.9;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 720px) {
+  .login-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-right {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .login-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  nav.menu a {
+    margin: 0 8px;
+    font-size: 0.82rem;
+  }
+}
+.footer {
+    background: #0d0d0d;
+    padding: 20px 0;
+    color: #fff;
+    margin-top: 50px;
+  }
+
+  /* BORDE INFERIOR FIJO */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .redes-sociales a {
+    display: inline-block;
+    margin-left: 12px;
+  }
+
+  .redes-sociales img {
+    width: 24px;
+    max-width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.85;
+  }
+
+  .redes-sociales img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+@media (max-width: 720px) {
+
+  .registro-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .registro-imagen {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .registro-imagen img {
+    max-width: 90%;
+  }
+
+  .registro-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
