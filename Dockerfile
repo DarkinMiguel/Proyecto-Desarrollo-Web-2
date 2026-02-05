@@ -1,13 +1,12 @@
 FROM php:8.2-apache
 
-# MySQLi para PHP
 RUN docker-php-ext-install mysqli
+RUN a2enmod rewrite
 
-# Copiar proyecto al servidor web
+# Copiar el proyecto (desde PROYECTO_SEGUNDO_PARCIAL) al DocumentRoot
 COPY . /var/www/html/
 
-# Hacer que Apache sirva desde /public
+# Apache debe servir desde /public
 RUN sed -i 's#/var/www/html#/var/www/html/public#g' /etc/apache2/sites-available/000-default.conf
 
 EXPOSE 80
-
